@@ -1,9 +1,10 @@
-import scipy
 import os
 from glob import glob
-import numpy as np
-import matplotlib.pyplot as plt
+from glob import glob
+
 import cv2
+import numpy as np
+
 
 class DataLoader():
     def __init__(self):

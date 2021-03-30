@@ -23,7 +23,9 @@ Data consists of two parts:
 | Wigs | 48 |
 
 Bald people: [google disk](https://drive.google.com/file/d/1cPddWYSRMR0rxIzYc73tkbc73typTchJ/view?usp=sharing)
+
 Bald people preprocessed for GAN:  [google disk](https://drive.google.com/file/d/1O_hP_-ZoVFmVi7D7dy1uyP1p4s_gNwQm/view?usp=sharing)
+
 Wigs: [google disk](https://drive.google.com/file/d/1tCXb37m4rMnFl2HRAbi1aFQ85FOqpsZS/view?usp=sharing)
 
 Bald people were obtained from: 
@@ -35,7 +37,8 @@ Bald people were obtained from:
 Pretrained model: [google disk]( https://drive.google.com/file/d/1Fh_H2CayIGhPmq0Q7SH4v03smKrnOrgY/view?usp=sharing)
 
 The project is based on code from the [keras-gan repository](https://github.com/eriklindernoren/Keras-GAN).
-As a face detector, [RetinaFace](https://github.com/deepinsight/insightface/tree/master/RetinaFace) is used.
+
+As a face detector, [RetinaFace](https://github.com/deepinsight/insightface/tree/master/detection/RetinaFace) is used.
 
 Project structure:
   - pix2pix_InsNorm.py - network training script

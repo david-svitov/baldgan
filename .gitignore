@@ -1,0 +1,9 @@
+.idea
+keras_contrib/__pycache__
+keras_contrib/layers/__pycache__
+keras_contrib/layers/normalization/__pycache__
+saved_model/faces_bald_InsNorm_4x4_D2/model_D_5_170.hdf5
+saved_model/faces_bald_InsNorm_4x4_D2/model_D_mask_5_170.hdf5
+saved_model/faces_bald_InsNorm_4x4_D2/model_G_5_170.hdf5
+
+

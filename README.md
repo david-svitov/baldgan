@@ -57,3 +57,16 @@ Features of the used model:
   - Two discriminators: for the whole face and the area under the hair
   - Using perceptual loss
   - InstanceNormalization
+
+## Citation
+
+```bibtex
+@misc{david-svitov-2020-baldgan,
+  author = {David Svitov},
+  title = {BaldGAN: Generative model for hair removal from photo},
+  year = {2020},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/david-svitov/baldgan}}
+}
+```

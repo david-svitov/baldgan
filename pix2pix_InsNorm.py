@@ -1,18 +1,15 @@
 from __future__ import print_function, division
 
 import datetime
-
 import keras.backend as K
 import matplotlib
-from keras.layers import Add, GlobalAveragePooling2D, multiply, Permute
+from keras.layers import Add, GlobalAveragePooling2D, multiply, Permute, LeakyReLU
 from keras.layers import Input, Dense, Reshape, Dropout, Concatenate, Lambda
-from keras.layers.advanced_activations import LeakyReLU
-from keras.layers.convolutional import UpSampling2D, Conv2D, AtrousConvolution2D
+from keras.layers.convolutional import UpSampling2D, Conv2D
 from keras.models import Model
 from keras.optimizers import Adam
 from keras_contrib.layers.normalization.instancenormalization import InstanceNormalization
 
-matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from data_loader_alpha_sintes import DataLoader
 import numpy as np
@@ -21,12 +18,14 @@ import os
 from keras.applications import VGG19
 from keras.applications.vgg19 import preprocess_input
 
+matplotlib.use('Agg')
+
 
 def L2(A, B):
     return K.sqrt(K.sum(K.pow(A - B, 2), axis=[1, 2, 3]))
 
 
-class Pix2Pix():
+class Pix2Pix:
     def __init__(self):
         # Input shape
         self.img_rows = 256
@@ -169,7 +168,7 @@ class Pix2Pix():
         def atrous(layer_input, filters, f_size=4, bn=True):
             a_list = []
             for rate in [2, 4, 8]:
-                a = AtrousConvolution2D(filters, f_size, atrous_rate=rate, border_mode='same')(layer_input)
+                a = Conv2D(filters, f_size, dilation_rate=rate, padding='same')(layer_input)
                 a_list.append(a)
             a = Concatenate()(a_list)
             a = LeakyReLU(alpha=0.2)(a)

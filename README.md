@@ -41,10 +41,10 @@ The project is based on code from the [keras-gan repository](https://github.com/
 As a face detector, [RetinaFace](https://github.com/deepinsight/insightface/tree/master/detection/RetinaFace) is used.
 
 Project structure:
-  - pix2pix_InsNorm.py - network training script
+  - train.py - network training script
+  - test.py - network inference script
   - data_loader_alpha_sintes.py - data generator
   - dataset_prepare.ipynb - notebook for data preparation (or just download the prepared)
-  - check_results_v2_InsNorm_4x4.ipynb - notebook for testing in images
 
 To start training:
 ```sh
@@ -57,3 +57,16 @@ Features of the used model:
   - Two discriminators: for the whole face and the area under the hair
   - Using perceptual loss
   - InstanceNormalization
+
+## Citation
+
+```bibtex
+@misc{david-svitov-2020-baldgan,
+  author = {David Svitov},
+  title = {BaldGAN: Generative model for hair removal from photo},
+  year = {2020},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/david-svitov/baldgan}}
+}
+```

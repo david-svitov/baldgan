@@ -144,7 +144,7 @@ K.set_learning_phase(0)
 d0 = Input(shape=(256, 256, 3))
 
 gf = 64
-# Down sampling
+# Downsampling
 d1 = conv2d(d0, gf, bn=False, se=True)
 d2 = conv2d(d1, gf * 2, se=True)
 d3 = conv2d(d2, gf * 4, se=True)
@@ -153,7 +153,7 @@ d5 = conv2d(d4, gf * 8)
 
 a1 = atrous(d5, gf * 8)
 
-# Up sampling
+# Upsampling
 u3 = deconv2d(a1, d4, gf * 8)
 u4 = deconv2d(u3, d3, gf * 4)
 u5 = deconv2d(u4, d2, gf * 2)
@@ -192,4 +192,4 @@ def proc_files(filelist):
         plt.show()
 
 
-proc_files(['./examples/galgadot.png'])
+proc_files(['./examples/12.jpg'])
